@@ -1,0 +1,41 @@
+C:\Users\Ameed\Desktop\AmeedWork\WebApplication1\DataAccessLayer\bin\Debug\net5.0\DataAccessLayer.deps.json
+C:\Users\Ameed\Desktop\AmeedWork\WebApplication1\DataAccessLayer\bin\Debug\net5.0\DataAccessLayer.dll
+C:\Users\Ameed\Desktop\AmeedWork\WebApplication1\DataAccessLayer\bin\Debug\net5.0\ref\DataAccessLayer.dll
+C:\Users\Ameed\Desktop\AmeedWork\WebApplication1\DataAccessLayer\bin\Debug\net5.0\DataAccessLayer.pdb
+C:\Users\Ameed\Desktop\AmeedWork\WebApplication1\DataAccessLayer\bin\Debug\net5.0\Domain.dll
+C:\Users\Ameed\Desktop\AmeedWork\WebApplication1\DataAccessLayer\bin\Debug\net5.0\Domain.pdb
+C:\Users\Ameed\Desktop\AmeedWork\WebApplication1\DataAccessLayer\obj\Debug\net5.0\DataAccessLayer.csprojAssemblyReference.cache
+C:\Users\Ameed\Desktop\AmeedWork\WebApplication1\DataAccessLayer\obj\Debug\net5.0\DataAccessLayer.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Ameed\Desktop\AmeedWork\WebApplication1\DataAccessLayer\obj\Debug\net5.0\DataAccessLayer.AssemblyInfoInputs.cache
+C:\Users\Ameed\Desktop\AmeedWork\WebApplication1\DataAccessLayer\obj\Debug\net5.0\DataAccessLayer.AssemblyInfo.cs
+C:\Users\Ameed\Desktop\AmeedWork\WebApplication1\DataAccessLayer\obj\Debug\net5.0\DataAccessLayer.csproj.CoreCompileInputs.cache
+C:\Users\Ameed\Desktop\AmeedWork\WebApplication1\DataAccessLayer\obj\Debug\net5.0\DataAccessLayer.csproj.CopyComplete
+C:\Users\Ameed\Desktop\AmeedWork\WebApplication1\DataAccessLayer\obj\Debug\net5.0\DataAccessLayer.dll
+C:\Users\Ameed\Desktop\AmeedWork\WebApplication1\DataAccessLayer\obj\Debug\net5.0\ref\DataAccessLayer.dll
+C:\Users\Ameed\Desktop\AmeedWork\WebApplication1\DataAccessLayer\obj\Debug\net5.0\DataAccessLayer.pdb
+E:\New folder\AmeedWork\WebApplication1\DataAccessLayer\bin\Debug\net5.0\DataAccessLayer.deps.json
+E:\New folder\AmeedWork\WebApplication1\DataAccessLayer\bin\Debug\net5.0\DataAccessLayer.dll
+E:\New folder\AmeedWork\WebApplication1\DataAccessLayer\bin\Debug\net5.0\ref\DataAccessLayer.dll
+E:\New folder\AmeedWork\WebApplication1\DataAccessLayer\bin\Debug\net5.0\DataAccessLayer.pdb
+E:\New folder\AmeedWork\WebApplication1\DataAccessLayer\obj\Debug\net5.0\DataAccessLayer.GeneratedMSBuildEditorConfig.editorconfig
+E:\New folder\AmeedWork\WebApplication1\DataAccessLayer\obj\Debug\net5.0\DataAccessLayer.AssemblyInfoInputs.cache
+E:\New folder\AmeedWork\WebApplication1\DataAccessLayer\obj\Debug\net5.0\DataAccessLayer.AssemblyInfo.cs
+E:\New folder\AmeedWork\WebApplication1\DataAccessLayer\obj\Debug\net5.0\DataAccessLayer.csproj.CoreCompileInputs.cache
+E:\New folder\AmeedWork\WebApplication1\DataAccessLayer\obj\Debug\net5.0\DataAccessLayer.dll
+E:\New folder\AmeedWork\WebApplication1\DataAccessLayer\obj\Debug\net5.0\ref\DataAccessLayer.dll
+E:\New folder\AmeedWork\WebApplication1\DataAccessLayer\obj\Debug\net5.0\DataAccessLayer.pdb
+E:\New folder\AmeedWork\WebApplication1\DataAccessLayer\obj\Debug\net5.0\EFCoreSqlServerNetTopologySuite.cs
+E:\New folder\AmeedWork\WebApplication1\DataAccessLayer\obj\Debug\net5.0\DataAccessLayer.csprojAssemblyReference.cache
+E:\New folder\APIMicroservices BookApplication\AuthorPublisherApi\DataAccessLayer\bin\Debug\net5.0\DataAccessLayer.deps.json
+E:\New folder\APIMicroservices BookApplication\AuthorPublisherApi\DataAccessLayer\bin\Debug\net5.0\DataAccessLayer.dll
+E:\New folder\APIMicroservices BookApplication\AuthorPublisherApi\DataAccessLayer\bin\Debug\net5.0\ref\DataAccessLayer.dll
+E:\New folder\APIMicroservices BookApplication\AuthorPublisherApi\DataAccessLayer\bin\Debug\net5.0\DataAccessLayer.pdb
+E:\New folder\APIMicroservices BookApplication\AuthorPublisherApi\DataAccessLayer\obj\Debug\net5.0\DataAccessLayer.csprojAssemblyReference.cache
+E:\New folder\APIMicroservices BookApplication\AuthorPublisherApi\DataAccessLayer\obj\Debug\net5.0\DataAccessLayer.GeneratedMSBuildEditorConfig.editorconfig
+E:\New folder\APIMicroservices BookApplication\AuthorPublisherApi\DataAccessLayer\obj\Debug\net5.0\DataAccessLayer.AssemblyInfoInputs.cache
+E:\New folder\APIMicroservices BookApplication\AuthorPublisherApi\DataAccessLayer\obj\Debug\net5.0\DataAccessLayer.AssemblyInfo.cs
+E:\New folder\APIMicroservices BookApplication\AuthorPublisherApi\DataAccessLayer\obj\Debug\net5.0\DataAccessLayer.csproj.CoreCompileInputs.cache
+E:\New folder\APIMicroservices BookApplication\AuthorPublisherApi\DataAccessLayer\obj\Debug\net5.0\EFCoreSqlServerNetTopologySuite.cs
+E:\New folder\APIMicroservices BookApplication\AuthorPublisherApi\DataAccessLayer\obj\Debug\net5.0\DataAccessLayer.dll
+E:\New folder\APIMicroservices BookApplication\AuthorPublisherApi\DataAccessLayer\obj\Debug\net5.0\ref\DataAccessLayer.dll
+E:\New folder\APIMicroservices BookApplication\AuthorPublisherApi\DataAccessLayer\obj\Debug\net5.0\DataAccessLayer.pdb

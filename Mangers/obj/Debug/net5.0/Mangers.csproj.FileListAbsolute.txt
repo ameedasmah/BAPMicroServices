@@ -1,0 +1,5 @@
+E:\New folder\AmeedWork\WebApplication1\Mangers\obj\Debug\net5.0\Mangers.csprojAssemblyReference.cache
+E:\New folder\AmeedWork\WebApplication1\Mangers\obj\Debug\net5.0\Mangers.GeneratedMSBuildEditorConfig.editorconfig
+E:\New folder\AmeedWork\WebApplication1\Mangers\obj\Debug\net5.0\Mangers.AssemblyInfoInputs.cache
+E:\New folder\AmeedWork\WebApplication1\Mangers\obj\Debug\net5.0\Mangers.AssemblyInfo.cs
+E:\New folder\AmeedWork\WebApplication1\Mangers\obj\Debug\net5.0\Mangers.csproj.CoreCompileInputs.cache

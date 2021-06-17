@@ -1,0 +1,32 @@
+E:\New folder\AmeedWork\WebApplication1\Contract\obj\Debug\net5.0\Contract.GeneratedMSBuildEditorConfig.editorconfig
+E:\New folder\AmeedWork\WebApplication1\Contract\obj\Debug\net5.0\Contract.AssemblyInfoInputs.cache
+E:\New folder\AmeedWork\WebApplication1\Contract\obj\Debug\net5.0\Contract.AssemblyInfo.cs
+E:\New folder\AmeedWork\WebApplication1\Contract\obj\Debug\net5.0\Contract.csproj.CoreCompileInputs.cache
+E:\New folder\AmeedWork\WebApplication1\Contract\bin\Debug\net5.0\Contract.deps.json
+E:\New folder\AmeedWork\WebApplication1\Contract\bin\Debug\net5.0\Contract.dll
+E:\New folder\AmeedWork\WebApplication1\Contract\bin\Debug\net5.0\ref\Contract.dll
+E:\New folder\AmeedWork\WebApplication1\Contract\bin\Debug\net5.0\Contract.pdb
+E:\New folder\AmeedWork\WebApplication1\Contract\obj\Debug\net5.0\Contract.dll
+E:\New folder\AmeedWork\WebApplication1\Contract\obj\Debug\net5.0\ref\Contract.dll
+E:\New folder\AmeedWork\WebApplication1\Contract\obj\Debug\net5.0\Contract.pdb
+E:\New folder\AmeedWork\WebApplication1\Contract\obj\Debug\net5.0\Contract.csprojAssemblyReference.cache
+E:\New folder\AmeedWork\WebApplication1\Contract\bin\Debug\net5.0\DataAccessLayer.dll
+E:\New folder\AmeedWork\WebApplication1\Contract\bin\Debug\net5.0\DataAccessLayer.pdb
+E:\New folder\AmeedWork\WebApplication1\Contract\obj\Debug\net5.0\Contract.csproj.CopyComplete
+E:\New folder\AmeedWork\WebApplication1\Contract\obj\Debug\net5.0\EFCoreSqlServerNetTopologySuite.cs
+E:\New folder\APIMicroservices BookApplication\AuthorPublisherApi\Contract\bin\Debug\net5.0\Contract.deps.json
+E:\New folder\APIMicroservices BookApplication\AuthorPublisherApi\Contract\bin\Debug\net5.0\Contract.dll
+E:\New folder\APIMicroservices BookApplication\AuthorPublisherApi\Contract\bin\Debug\net5.0\ref\Contract.dll
+E:\New folder\APIMicroservices BookApplication\AuthorPublisherApi\Contract\bin\Debug\net5.0\Contract.pdb
+E:\New folder\APIMicroservices BookApplication\AuthorPublisherApi\Contract\bin\Debug\net5.0\DataAccessLayer.dll
+E:\New folder\APIMicroservices BookApplication\AuthorPublisherApi\Contract\bin\Debug\net5.0\DataAccessLayer.pdb
+E:\New folder\APIMicroservices BookApplication\AuthorPublisherApi\Contract\obj\Debug\net5.0\Contract.csprojAssemblyReference.cache
+E:\New folder\APIMicroservices BookApplication\AuthorPublisherApi\Contract\obj\Debug\net5.0\Contract.GeneratedMSBuildEditorConfig.editorconfig
+E:\New folder\APIMicroservices BookApplication\AuthorPublisherApi\Contract\obj\Debug\net5.0\Contract.AssemblyInfoInputs.cache
+E:\New folder\APIMicroservices BookApplication\AuthorPublisherApi\Contract\obj\Debug\net5.0\Contract.AssemblyInfo.cs
+E:\New folder\APIMicroservices BookApplication\AuthorPublisherApi\Contract\obj\Debug\net5.0\Contract.csproj.CoreCompileInputs.cache
+E:\New folder\APIMicroservices BookApplication\AuthorPublisherApi\Contract\obj\Debug\net5.0\EFCoreSqlServerNetTopologySuite.cs
+E:\New folder\APIMicroservices BookApplication\AuthorPublisherApi\Contract\obj\Debug\net5.0\Contract.csproj.CopyComplete
+E:\New folder\APIMicroservices BookApplication\AuthorPublisherApi\Contract\obj\Debug\net5.0\Contract.dll
+E:\New folder\APIMicroservices BookApplication\AuthorPublisherApi\Contract\obj\Debug\net5.0\ref\Contract.dll
+E:\New folder\APIMicroservices BookApplication\AuthorPublisherApi\Contract\obj\Debug\net5.0\Contract.pdb

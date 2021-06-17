@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>Domain</id>
+    <version>1.0.0</version>
+    <authors>Domain</authors>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Package Description</description>
+    <dependencies>
+      <group targetFramework="net5.0">
+        <dependency id="Contract" version="1.0.0" exclude="Build,Analyzers" />
+        <dependency id="DataAccessLayer" version="1.0.0" exclude="Build,Analyzers" />
+        <dependency id="Microsoft.AspNetCore" version="2.2.0" exclude="Build,Analyzers" />
+        <dependency id="Microsoft.AspNetCore.Mvc.Core" version="2.2.5" exclude="Build,Analyzers" />
+        <dependency id="Microsoft.Azure.Management.ResourceManager.Fluent" version="1.37.1" exclude="Build,Analyzers" />
+        <dependency id="Microsoft.EntityFrameworkCore" version="5.0.7" exclude="Build,Analyzers" />
+        <dependency id="Microsoft.EntityFrameworkCore.SqlServer.NetTopologySuite" version="5.0.7" exclude="Build,Analyzers" />
+        <dependency id="RabbitMQ.Client" version="6.2.1" exclude="Build,Analyzers" />
+      </group>
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="E:\New folder\APIMicroservices BookApplication\AuthorPublisherApi\Domain\bin\Debug\net5.0\Domain.dll" target="lib\net5.0\Domain.dll" />
+  </files>
+</package>
