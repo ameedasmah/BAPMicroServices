@@ -1,9 +1,9 @@
 ﻿using System;
 using Microsoft.EntityFrameworkCore.Migrations;
 
-namespace WebApplication1.Migrations
+namespace AuthorPublisherProject.Migrations
 {
-    public partial class init : Migration
+    public partial class initAuthorPublisher : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {

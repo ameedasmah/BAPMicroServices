@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
-namespace WebApplication1.Migrations
+namespace AuthorPublisherProject.Migrations
 {
     [DbContext(typeof(BookContext))]
     partial class BookContextModelSnapshot : ModelSnapshot

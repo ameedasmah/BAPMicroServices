@@ -7,11 +7,11 @@ using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
-namespace WebApplication1.Migrations
+namespace AuthorPublisherProject.Migrations
 {
     [DbContext(typeof(BookContext))]
-    [Migration("20210614071925_init")]
-    partial class init
+    [Migration("20210621115203_initAuthorPublisher")]
+    partial class initAuthorPublisher
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {

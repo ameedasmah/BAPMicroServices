@@ -37,9 +37,9 @@ namespace WebApplication1.Helper
             {
                 Id = entities.Id,
                 Name = entities.Name,
-                Email=entities.Email,
-                Salery=entities.Salery,
-                DateOfBirth=entities.DateOfBirth,
+                Email = entities.Email,
+                Salery = entities.Salery,
+                DateOfBirth = entities.DateOfBirth,
                 Books = entities.Books.Select(x => x.ToLightResource()).ToList()
             };
         }
@@ -47,7 +47,7 @@ namespace WebApplication1.Helper
         public static BookPublisherResource ToResourceNew(this Book entitiy)
         {
             return new BookPublisherResource()
-       
+
 
             {
                 Id = entitiy.Id,
@@ -69,7 +69,6 @@ namespace WebApplication1.Helper
             };
         }
 
-
         public static PublisherBookResource ToResourceNew(this Publisher entities)
         {
             return new PublisherBookResource()
@@ -78,7 +77,6 @@ namespace WebApplication1.Helper
                 Name = entities.Name,
             };
         }
-
         public static AuthorResource ToResource(this Author entitiy)
         {
             return new AuthorResource()
@@ -88,8 +86,8 @@ namespace WebApplication1.Helper
                 Email = entitiy.Email,
                 Age = entitiy.Age,
                 Books = entitiy.Books.Select(x => x.ToResourceNEw()).ToList()
-        };
-    }
+            };
+        }
 
 
         public static AuthorBookCreateResource ToResourceNEw(this Author entitiy)
