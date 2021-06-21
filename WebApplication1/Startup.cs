@@ -72,7 +72,7 @@ namespace WebApplication1
             app.UseCors(x => x
             .AllowAnyOrigin()
             .AllowAnyMethod()
-            .AllowAnyHeader());
+            .AllowAnyHeader().AllowAnyMethod());
 
             app.UseAuthorization();
 

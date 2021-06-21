@@ -9615,11 +9615,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\New folder\\APIMicroservices BookApplication\\AuthorPublisherApi\\Domain\\Domain.csproj",
+      "projectUniqueName": "E:\\New folder\\GitHub ApiBook\\AuthorPublisherApi\\Domain\\Domain.csproj",
       "projectName": "Domain",
-      "projectPath": "E:\\New folder\\APIMicroservices BookApplication\\AuthorPublisherApi\\Domain\\Domain.csproj",
+      "projectPath": "E:\\New folder\\GitHub ApiBook\\AuthorPublisherApi\\Domain\\Domain.csproj",
       "packagesPath": "C:\\Users\\Ameed\\.nuget\\packages\\",
-      "outputPath": "E:\\New folder\\APIMicroservices BookApplication\\AuthorPublisherApi\\Domain\\obj\\",
+      "outputPath": "E:\\New folder\\GitHub ApiBook\\AuthorPublisherApi\\Domain\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Ameed\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -9636,11 +9636,11 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "E:\\New folder\\APIMicroservices BookApplication\\AuthorPublisherApi\\Contract\\Contract.csproj": {
-              "projectPath": "E:\\New folder\\APIMicroservices BookApplication\\AuthorPublisherApi\\Contract\\Contract.csproj"
+            "E:\\New folder\\GitHub ApiBook\\AuthorPublisherApi\\Contract\\Contract.csproj": {
+              "projectPath": "E:\\New folder\\GitHub ApiBook\\AuthorPublisherApi\\Contract\\Contract.csproj"
             },
-            "E:\\New folder\\APIMicroservices BookApplication\\AuthorPublisherApi\\DataAccessLayer\\DataAccessLayer.csproj": {
-              "projectPath": "E:\\New folder\\APIMicroservices BookApplication\\AuthorPublisherApi\\DataAccessLayer\\DataAccessLayer.csproj"
+            "E:\\New folder\\GitHub ApiBook\\AuthorPublisherApi\\DataAccessLayer\\DataAccessLayer.csproj": {
+              "projectPath": "E:\\New folder\\GitHub ApiBook\\AuthorPublisherApi\\DataAccessLayer\\DataAccessLayer.csproj"
             }
           }
         }

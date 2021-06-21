@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "E:\\New folder\\APIMicroservices BookApplication\\AuthorPublisherApi\\DataAccessLayer\\DataAccessLayer.csproj": {}
+    "E:\\New folder\\GitHub ApiBook\\AuthorPublisherApi\\DataAccessLayer\\DataAccessLayer.csproj": {}
   },
   "projects": {
-    "E:\\New folder\\APIMicroservices BookApplication\\AuthorPublisherApi\\DataAccessLayer\\DataAccessLayer.csproj": {
+    "E:\\New folder\\GitHub ApiBook\\AuthorPublisherApi\\DataAccessLayer\\DataAccessLayer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\New folder\\APIMicroservices BookApplication\\AuthorPublisherApi\\DataAccessLayer\\DataAccessLayer.csproj",
+        "projectUniqueName": "E:\\New folder\\GitHub ApiBook\\AuthorPublisherApi\\DataAccessLayer\\DataAccessLayer.csproj",
         "projectName": "DataAccessLayer",
-        "projectPath": "E:\\New folder\\APIMicroservices BookApplication\\AuthorPublisherApi\\DataAccessLayer\\DataAccessLayer.csproj",
+        "projectPath": "E:\\New folder\\GitHub ApiBook\\AuthorPublisherApi\\DataAccessLayer\\DataAccessLayer.csproj",
         "packagesPath": "C:\\Users\\Ameed\\.nuget\\packages\\",
-        "outputPath": "E:\\New folder\\APIMicroservices BookApplication\\AuthorPublisherApi\\DataAccessLayer\\obj\\",
+        "outputPath": "E:\\New folder\\GitHub ApiBook\\AuthorPublisherApi\\DataAccessLayer\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Ameed\\AppData\\Roaming\\NuGet\\NuGet.Config",

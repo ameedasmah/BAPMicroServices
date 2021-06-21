@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "nugeEsM6vX6ONq//c1v67DGtwfY9aaVIp2SJkIX8dptkoRM/qBqfgnBYbpjsw2ChOhUXsQANug1XmN5JMwVdHQ==",
+  "dgSpecHash": "B2zkElHIj7hXDttu3XwPOoV0z+VmN3+ebVXghxM081y7HX3eiL/sOqIbT6/GpEeSSuv2ijXlyJv94k1lktvcVA==",
   "success": true,
-  "projectFilePath": "E:\\New folder\\APIMicroservices BookApplication\\AuthorPublisherApi\\WebApplication1\\AuthorPublisherProject.csproj",
+  "projectFilePath": "E:\\New folder\\GitHub ApiBook\\AuthorPublisherApi\\WebApplication1\\AuthorPublisherProject.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Ameed\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\Ameed\\.nuget\\packages\\microsoft.aspnet.cors\\5.2.7\\microsoft.aspnet.cors.5.2.7.nupkg.sha512",

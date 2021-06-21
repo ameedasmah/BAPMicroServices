@@ -7288,11 +7288,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\New folder\\APIMicroservices BookApplication\\AuthorPublisherApi\\Contract\\Contract.csproj",
+      "projectUniqueName": "E:\\New folder\\GitHub ApiBook\\AuthorPublisherApi\\Contract\\Contract.csproj",
       "projectName": "Contract",
-      "projectPath": "E:\\New folder\\APIMicroservices BookApplication\\AuthorPublisherApi\\Contract\\Contract.csproj",
+      "projectPath": "E:\\New folder\\GitHub ApiBook\\AuthorPublisherApi\\Contract\\Contract.csproj",
       "packagesPath": "C:\\Users\\Ameed\\.nuget\\packages\\",
-      "outputPath": "E:\\New folder\\APIMicroservices BookApplication\\AuthorPublisherApi\\Contract\\obj\\",
+      "outputPath": "E:\\New folder\\GitHub ApiBook\\AuthorPublisherApi\\Contract\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Ameed\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -7309,8 +7309,8 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "E:\\New folder\\APIMicroservices BookApplication\\AuthorPublisherApi\\DataAccessLayer\\DataAccessLayer.csproj": {
-              "projectPath": "E:\\New folder\\APIMicroservices BookApplication\\AuthorPublisherApi\\DataAccessLayer\\DataAccessLayer.csproj"
+            "E:\\New folder\\GitHub ApiBook\\AuthorPublisherApi\\DataAccessLayer\\DataAccessLayer.csproj": {
+              "projectPath": "E:\\New folder\\GitHub ApiBook\\AuthorPublisherApi\\DataAccessLayer\\DataAccessLayer.csproj"
             }
           }
         }

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "BHwnKNBt6+Rjz2oy94oFwUIgsKi1oek8zIQu6vmy//U2sOrWWZ6Pj2p1PVLrVY05C8zEsxDV0yBGjxY8wuWlBw==",
+  "dgSpecHash": "7f4WBwmFkbN6WPeMjOxT8bosGyOf+7DEYG62oMk4pekQxRdMQdsLrYUyjOQbo3Nhi7FnO9L6pdfML5/Kjm1NBg==",
   "success": true,
-  "projectFilePath": "E:\\New folder\\APIMicroservices BookApplication\\AuthorPublisherApi\\Domain\\Domain.csproj",
+  "projectFilePath": "E:\\New folder\\GitHub ApiBook\\AuthorPublisherApi\\Domain\\Domain.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Ameed\\.nuget\\packages\\microsoft.aspnetcore\\2.2.0\\microsoft.aspnetcore.2.2.0.nupkg.sha512",
     "C:\\Users\\Ameed\\.nuget\\packages\\microsoft.aspnetcore.authentication.abstractions\\2.2.0\\microsoft.aspnetcore.authentication.abstractions.2.2.0.nupkg.sha512",
