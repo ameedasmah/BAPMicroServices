@@ -36,9 +36,9 @@ namespace Domins.mangers
             }
             try
             {
-                _bookContext.Authors.Add(author);
+                _bookContext.Add(author);
                 await _bookContext.SaveChangesAsync();
-                return author;
+                return await _bookContext.Authors.Include(item => item.Books).FirstOrDefaultAsync(x => x.Id == author.Id);
             }
             catch (Exception exiption)
             {
