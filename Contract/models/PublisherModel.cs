@@ -11,9 +11,11 @@ namespace Contract.models
         [Required(ErrorMessage = "The field is required")]
         [StringLength(25, ErrorMessage = "The field must be less than {25} characters", MinimumLength = 2)]
         public string Name { get; set; }
-        [Required]
-        [RegularExpression(@"\A(?:[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?)\Z", ErrorMessage = "Email Address cannot have white spaces")]
+        [Required(ErrorMessage = "Pole wymagane")]
+        [RegularExpression(@"^\S*$", ErrorMessage = "Email Address cannot have white spaces")]
         [Display(Name = "Email")]
+        [DataType(DataType.EmailAddress)]
+        [EmailAddress]
         public string Email { get; set; }
         [Required]
         [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}")]
@@ -21,6 +23,6 @@ namespace Contract.models
         public DateTime DateOfBirth { get; set; }
         [Required]
         [Range(2000, 5000, ErrorMessage = "it must be between 2000 and 5000 $")]
-        public int Salery { get; set; }
+        public float Salery { get; set; }
     }
 }

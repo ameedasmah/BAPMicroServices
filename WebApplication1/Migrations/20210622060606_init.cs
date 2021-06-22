@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace AuthorPublisherProject.Migrations
 {
-    public partial class initAuthorPublisher : Migration
+    public partial class init : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -31,7 +31,7 @@ namespace AuthorPublisherProject.Migrations
                     Name = table.Column<string>(type: "nvarchar(25)", maxLength: 25, nullable: false),
                     Email = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     DateOfBirth = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    Salery = table.Column<int>(type: "int", nullable: false)
+                    Salery = table.Column<float>(type: "real", nullable: false)
                 },
                 constraints: table =>
                 {

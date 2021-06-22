@@ -12,9 +12,11 @@ namespace Contract.Entities
         [Required]
         [StringLength(25, MinimumLength = 2)]
         public string  Name { get; set; }
-        [Required]
-        [RegularExpression(@"\A(?:[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?)\Z")]
+        [Required(ErrorMessage = "Pole wymagane")]
+        [RegularExpression(@"^\S*$", ErrorMessage = "Email Address cannot have white spaces")]
         [Display(Name = "Email")]
+        [DataType(DataType.EmailAddress)]
+        [EmailAddress]
         public string Email { get; set; }
         [Required]
         [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}")]
@@ -22,7 +24,7 @@ namespace Contract.Entities
         public DateTime DateOfBirth { get; set; }
         [Required]
         [Range(2000,5000,ErrorMessage="it must be between 2000 and 5000 $")]
-        public int Salery { get; set; }
+        public float Salery { get; set; }
         //Navigation Properites
 
         public List<Book> Books { get; set; }

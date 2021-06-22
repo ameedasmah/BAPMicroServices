@@ -10,8 +10,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace AuthorPublisherProject.Migrations
 {
     [DbContext(typeof(BookContext))]
-    [Migration("20210621115203_initAuthorPublisher")]
-    partial class initAuthorPublisher
+    [Migration("20210622060906_newone")]
+    partial class newone
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -105,8 +105,8 @@ namespace AuthorPublisherProject.Migrations
                         .HasMaxLength(25)
                         .HasColumnType("nvarchar(25)");
 
-                    b.Property<int>("Salery")
-                        .HasColumnType("int");
+                    b.Property<float>("Salery")
+                        .HasColumnType("real");
 
                     b.HasKey("Id");
 
