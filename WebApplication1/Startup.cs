@@ -34,6 +34,7 @@ namespace WebApplication1
             services.AddScoped<IPublisherRepositories, PublisherReposoitories>();
             services.AddScoped<IAuthorRepositories, AuthorRepositories>();
             services.AddScoped<IPublisherSend, PublisherSend>();
+            services.AddScoped<IAuthor, AuthorSend>();
             services.AddScoped<IPublisherManger, publishermanger>();
             services.AddScoped <IAuthorMangers, AuthorManger>();
 

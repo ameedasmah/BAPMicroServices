@@ -19,7 +19,7 @@ namespace Domain.mangers
     public interface IPublisherManger
     {
         Task<IEnumerable<PublisherResource>> GetPublishers();
-        Task<Publisher> GetPublisher(int id);
+        Task<PublisherResource> GetPublisher(int id);
         Task<PublisherResource> CreatePublisher(PublisherModel newPublisherModel);
         Task<PublisherResource> PutPublisher(int id, PublisherModel model);
         Task DeleteResource(int Id);
@@ -47,6 +47,7 @@ namespace Domain.mangers
             _publisherSend.sendPublisher(new SendArgument()
             {
                 Id = newPublisherEntity.Id,
+                OperationType = "Publisher",
                 Type = "Create"
             });
             return newPublisherResource.ToResource();
@@ -58,18 +59,30 @@ namespace Domain.mangers
         {
             var BookToDelete = await _repository.GetPublisher(Id);
             if (BookToDelete == null) throw new Exception("Id not Found");
-            _publisherSend.sendPublisher(new SendArgument()
+            if (BookToDelete.Books.Count == 0)
             {
-                Id = BookToDelete.Id,
-                Type = "Delete"
-            });
-
-            await _repository.deletePublisher(BookToDelete.Id);
+                _publisherSend.sendPublisher(new SendArgument()
+                {
+                    Id = BookToDelete.Id,
+                    OperationType = "Publisher",
+                    Type = "Delete"
+                });
+                await _repository.deletePublisher(BookToDelete.Id);
+            }
+            else
+            {
+                throw new Exception("Cant Delete A Publisher That has A book");
+            }
         }
 
-        public async Task<Publisher> GetPublisher(int id)
+        public async Task<PublisherResource> GetPublisher(int id)
         {
-            return await _repository.GetPublisher(id);
+            var PublisherEntitiy =  await _repository.GetPublisher(id);
+            if (PublisherEntitiy is null)
+            {
+                throw new Exception($"this {id} is not found");
+            }
+            return PublisherEntitiy.ToResource();
         }
 
         public async Task<IEnumerable<PublisherResource>> GetPublishers()
