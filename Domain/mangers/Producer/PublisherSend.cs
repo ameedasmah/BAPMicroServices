@@ -12,6 +12,8 @@ namespace Domain.mangers.Producer
     {
         public int Id { get; set; }
         public string Type { get; set; }
+        public string OperationType { get; set; }
+
     }
 
     public interface IPublisherSend

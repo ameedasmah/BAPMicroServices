@@ -2,6 +2,7 @@
 using Contract.Entities;
 using Contract.models;
 using Contract.Resourse;
+using Domain.mangers.Producer;
 using Domins.mangers;
 using System;
 using System.Collections.Generic;
@@ -24,10 +25,12 @@ namespace Domain.mangers
     public class AuthorManger : IAuthorMangers
     {
         private readonly IAuthorRepositories _reposotiry;
+        private readonly IAuthor _AuthorSend;
 
-        public AuthorManger(IAuthorRepositories reposotiry)
+        public AuthorManger(IAuthorRepositories reposotiry, IAuthor AuthorSend)
         {
             _reposotiry = reposotiry;
+            _AuthorSend = AuthorSend;
 
         }
 
@@ -40,6 +43,12 @@ namespace Domain.mangers
                 Age = newAuthor.Age,
             };
             var AuthortOEntities = await _reposotiry.CreateAuthor(AuthEntitiy);
+            _AuthorSend.SendAuthor(new AuthorToSend()
+            {
+                Id = AuthEntitiy.Id,
+                OperationType = "Author",
+                Type = "Create",
+            });
             return AuthortOEntities.ToResource();
 
         }
@@ -48,19 +57,31 @@ namespace Domain.mangers
         {
             var bookToDelete = await _reposotiry.GetAuthor(id);
             if (bookToDelete == null)
-                throw new Exception("Id is not correct");
-
+                throw new Exception($"Id is not correct");
             if (bookToDelete.Books.Count == 0)
             {
-                await _reposotiry.Delete(bookToDelete.Id);
-                throw new Exception("NO Data");
-            }
+                _AuthorSend.SendAuthor(new AuthorToSend()
+                {
+                    Id = bookToDelete.Id,
+                    OperationType = "Author",
+                    Type = "Delete"
+                });
 
+                await _reposotiry.Delete(bookToDelete.Id);
+            }
+            else
+            {
+                throw new Exception("Cant Delete Author that has a Book");
+            }
         }
 
         public async Task<AuthorResource> GetAuthor(int id)
         {
             var AuthorEntitiy = await _reposotiry.GetAuthor(id);
+            if(AuthorEntitiy is null)
+            {
+                throw new Exception($"this {id} is not found");
+            }
 
             return AuthorEntitiy.ToResource(); ;
         }
@@ -91,6 +112,6 @@ namespace Domain.mangers
             var UpdateEntitiy = await _reposotiry.Update(existingEntitiy);
             return UpdateEntitiy.ToResource();
         }
-        
+
     }
 }
