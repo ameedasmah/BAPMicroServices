@@ -18,8 +18,6 @@ namespace Contract.models
         public int PublisherId { get; set; }
         //[Required(ErrorMessage = "It's not allowed to be null")]
         public List<int> AuthorIds { get; set; }
-
-
-
     }
 }
+
