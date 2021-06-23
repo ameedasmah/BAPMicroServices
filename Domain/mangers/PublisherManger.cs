@@ -41,7 +41,7 @@ namespace Domain.mangers
                 Name = newPublisherModel.Name,
                 Email = newPublisherModel.Email,
                 DateOfBirth = newPublisherModel.DateOfBirth,
-                Salery = newPublisherModel.Salery
+                Salery = newPublisherModel.Salery,
             };
             var newPublisherResource = await _repository.CreatePublisher(newPublisherEntity);
             _publisherSend.sendPublisher(new SendArgument()
@@ -104,6 +104,9 @@ namespace Domain.mangers
             if (existingEntity == null) throw new Exception("Id not Found");
 
             existingEntity.Name = model.Name;
+            existingEntity.Email = model.Email;
+            existingEntity.Salery = model.Salery;
+            existingEntity.DateOfBirth = model.DateOfBirth;
             var updatedEntity = await _repository.updatePublisher(existingEntity);
             _publisherSend.sendPublisher(new SendArgument()
             {
