@@ -33,7 +33,7 @@ namespace WebApplication1.Controllers
         }
         [HttpGet("{id}")]
 
-        public async Task<Publisher> GetPublisher(int id)
+        public async Task<PublisherResource> GetPublisher(int id)
         {
             return await publishermanger.GetPublisher(id);
         }
