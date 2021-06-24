@@ -36,6 +36,14 @@ namespace Publisherss.Domin.Test
                     DateOfBirth = new DateTime(),
             }
           };
+            Contract.Entities.Publisher NewPublisher = new Contract.Entities.Publisher
+            {
+                Id = 1,
+                    Name = "test2",
+                    Email = "test2@test.test",
+                    Salery = 4325,
+                    DateOfBirth = new DateTime(),
+                };
         }
         [Fact]
         public async void GetAll_PublisherList()
@@ -129,7 +137,7 @@ namespace Publisherss.Domin.Test
              );
             //Assert
         }
-
+        //Happy case
         [Fact]
         public async void Remove_Publisher()
         {
@@ -153,37 +161,40 @@ namespace Publisherss.Domin.Test
                 Email = "test2@test.test",
                 Salery = 4325,
                 DateOfBirth = new DateTime(),
+                Books = new List<PublisherBookCreate>() { }
             };
             await _PublisherManger.DeleteResource(newPublisherResource.Id);
             _PublisherRepositoriesMock.Verify(x => x.deletePublisher(newPublisher.Id));
             //Assert
-            //Assert.True(result);
         }
+        [Fact]
+        public async void Remove_PublisherThatHasBooks()
+        {
+            //Arrange
+            Contract.Entities.Publisher newPublisher = new Contract.Entities.Publisher
+            {
+                Id = 1,
+                Name = "test2",
+                Email = "test2@test.test",
+                Salery = 4325,
+                DateOfBirth = new DateTime(),
+                Books = new List<Book>() { new Book { }, new Book { } }
+            };
+            PublisherResource newPublisherResource = new PublisherResource()
+            {
+                Id = 1,
+                Name = "test2",
+                Email = "test2@test.test",
+                Salery = 4325,
+                DateOfBirth = new DateTime(),
+                Books = new List<PublisherBookCreate>() { new PublisherBookCreate { }, new PublisherBookCreate { } }
+            };
+            //Arrange
+            _PublisherRepositoriesMock.Setup(c => c.GetPublisher(It.IsAny<int>())).Returns(Task.FromResult<Contract.Entities.Publisher>(null));
+            var exception = await Assert.ThrowsAsync<Exception>(() =>
+               _PublisherManger.DeleteResource(newPublisherResource.Id));
 
-
-        //public async void Update_Publisher()
-        //{
-        //    //Arrange
-        //    Contract.Entities.Publisher newPublisher = new Contract.Entities.Publisher
-        //    {
-        //        Id = 1,
-        //        Name = "test3",
-        //        Email = "test3@test.test",
-        //        Salery = 4325,
-        //        DateOfBirth = new DateTime(),
-        //    };
-        //    _PublisherRepositoriesMock.Setup(c => c.updatePublisher(newPublisher.Id));
-        //    //act
-        //    var result = await _PublisherMangerMock.CreatePublisher(new Contract.models.PublisherModel
-        //    {
-        //        Name = "test3",
-        //        Email = "test3@test.test",
-        //        DateOfBirth = new DateTime(),
-        //        Salery = 4530,
-        //    });
-        //    //Assert
-        //    Assert.NotNull(result);
-        //    Assert.IsType<PublisherResource>(result);
-        //}
+            //Assert
+        }
     }
 }
