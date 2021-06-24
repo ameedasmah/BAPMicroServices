@@ -13,7 +13,6 @@ using System.Threading.Tasks;
 using WebApplication1.Helper;
 using WebApplication1.Repositories;
 
-
 namespace Domain.mangers
 {
     public interface IPublisherManger
@@ -26,7 +25,6 @@ namespace Domain.mangers
     }
     public class publishermanger : IPublisherManger
     {
-
         private readonly IPublisherRepositories _repository;
         private readonly IPublisherSend _publisherSend;
         public publishermanger(IPublisherRepositories repository, IPublisherSend publisherSend)
@@ -51,33 +49,29 @@ namespace Domain.mangers
                 Type = "Create"
             });
             return newPublisherResource.ToResource();
-
-
         }
-
         public async Task DeleteResource(int Id)
         {
             var BookToDelete = await _repository.GetPublisher(Id);
             if (BookToDelete == null) throw new Exception("Id not Found");
             if (BookToDelete.Books.Count == 0)
             {
+                await _repository.deletePublisher(BookToDelete.Id);
                 _publisherSend.sendPublisher(new SendArgument()
                 {
                     Id = BookToDelete.Id,
                     OperationType = "Publisher",
                     Type = "Delete"
                 });
-                await _repository.deletePublisher(BookToDelete.Id);
             }
             else
             {
                 throw new Exception("Cant Delete A Publisher That has A book");
             }
         }
-
         public async Task<PublisherResource> GetPublisher(int id)
         {
-            var PublisherEntitiy =  await _repository.GetPublisher(id);
+            var PublisherEntitiy = await _repository.GetPublisher(id);
             if (PublisherEntitiy is null)
             {
                 throw new Exception($"this {id} is not found");
@@ -111,6 +105,7 @@ namespace Domain.mangers
             _publisherSend.sendPublisher(new SendArgument()
             {
                 Id = existingEntity.Id,
+                OperationType = "Publisher",
                 Type = "Update"
             });
             return updatedEntity.ToResource();
