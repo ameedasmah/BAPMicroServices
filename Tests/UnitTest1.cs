@@ -60,6 +60,7 @@ namespace Publisherss.Domin.Test
         public async void GetById_Publisher()
         {
             //Arrange
+
             var PublisherId = 1;
 
             Contract.Entities.Publisher newPublisher = new Contract.Entities.Publisher
@@ -73,10 +74,70 @@ namespace Publisherss.Domin.Test
 
             _PublisherRepositoriesMock.Setup(c => c.GetPublisher(newPublisher.Id)).ReturnsAsync(newPublisher);
             //act
-            var result = await _PublisherMangerMock.GetPublisher(newPublisher.Id);
+            PublisherResource newPublisherResource = new PublisherResource()
+            {
+                Id = 1,
+                Name = "test2",
+                Email = "test2@test.test",
+                Salery = 4325,
+                DateOfBirth = new DateTime(),
+            };
+            var result = await _PublisherMangerMock.GetPublisher(newPublisherResource.Id);
 
             //Assert
             Assert.Equal(PublisherId, newPublisher.Id);
         }
+        [Fact]
+        public async void Create_Publisher()
+        {
+            //Arrange
+            Contract.Entities.Publisher newPublisher = new Contract.Entities.Publisher
+            {
+                Id = 1,
+                Name = "test2",
+                Email = "test2@test.test",
+                Salery = 4325,
+                DateOfBirth = new DateTime(),
+            };
+
+            _PublisherRepositoriesMock.Setup(c => c.CreatePublisher(newPublisher)).ReturnsAsync(newPublisher);
+            //act
+            var result = await _PublisherMangerMock.CreatePublisher(new Contract.models.PublisherModel { 
+            Name="test3",
+            Email="test3@test.test",
+            DateOfBirth=new DateTime(),
+            Salery=4530,
+            });
+            //Assert
+            Assert.NotNull(result);
+            Assert.IsType<PublisherResource>(result);
+        }
+
+
+        //public async void Update_Publisher()
+        //{
+        //    //Arrange
+        //    Contract.Entities.Publisher newPublisher = new Contract.Entities.Publisher
+        //    {
+        //        Id = 1,
+        //        Name = "test3",
+        //        Email = "test3@test.test",
+        //        Salery = 4325,
+        //        DateOfBirth = new DateTime(),
+        //    };
+
+        //    _PublisherRepositoriesMock.Setup(c => c.updatePublisher(newPublisher.Id));
+        //    //act
+        //    var result = await _PublisherMangerMock.CreatePublisher(new Contract.models.PublisherModel
+        //    {
+        //        Name = "test3",
+        //        Email = "test3@test.test",
+        //        DateOfBirth = new DateTime(),
+        //        Salery = 4530,
+        //    });
+        //    //Assert
+        //    Assert.NotNull(result);
+        //    Assert.IsType<PublisherResource>(result);
+        //}
     }
 }
