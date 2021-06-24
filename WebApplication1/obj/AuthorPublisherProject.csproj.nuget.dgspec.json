@@ -320,6 +320,10 @@
               "target": "Package",
               "version": "[5.0.1, )"
             },
+            "Moq": {
+              "target": "Package",
+              "version": "[4.16.1, )"
+            },
             "RabbitMQ.Client": {
               "target": "Package",
               "version": "[6.2.1, )"

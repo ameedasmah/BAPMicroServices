@@ -26,7 +26,6 @@ namespace WebApplication1
         {
             Configuration = configuration;
         }
-
         public IConfiguration Configuration { get; }
         public void ConfigureServices(IServiceCollection services)
         {
@@ -36,7 +35,7 @@ namespace WebApplication1
             services.AddScoped<IPublisherSend, PublisherSend>();
             services.AddScoped<IAuthor, AuthorSend>();
             services.AddScoped<IPublisherManger, publishermanger>();
-            services.AddScoped <IAuthorMangers, AuthorManger>();
+            services.AddScoped<IAuthorMangers, AuthorManger>();
 
 
 
