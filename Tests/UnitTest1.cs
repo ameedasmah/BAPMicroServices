@@ -185,7 +185,7 @@ namespace Publisherss.Domin.Test
             _PublisherRepositoriesMock.Setup(c => c.GetPublisher(newPublisher.Id)).ReturnsAsync(newPublisher);
             
             //Arrange
-            _PublisherRepositoriesMock.Setup(c => c.GetPublisher(It.IsAny<int>())).Returns(Task.FromResult<Contract.Entities.Publisher>(null));
+            //_PublisherRepositoriesMock.Setup(c => c.GetPublisher(It.IsAny<int>())).Returns(Task.FromResult<Contract.Entities.Publisher>(null));
             var exception = await Assert.ThrowsAsync<Exception>(() =>
                _PublisherManger.DeleteResource(newPublisher.Id));
             //Assert
