@@ -8,6 +8,8 @@ using System.Collections.Generic;
 using System.Threading.Tasks;
 using Domain.mangers.Producer;
 using System.Management.Automation;
+using Contract.models;
+using Contract.Entities;
 
 namespace Publisherss.Domin.Test
 {
@@ -15,14 +17,14 @@ namespace Publisherss.Domin.Test
     {
         private readonly Mock<IPublisherRepositories> _PublisherRepositoriesMock;
         private readonly Mock<IPublisherSend> _PublisherSendiesMock;
-        private readonly IPublisherManger _PublisherMangerMock;
+        private readonly IPublisherManger _PublisherManger;
         private readonly List<PublisherResource> PublisherResourceToTest;
 
         public PublisherTest()
         {
             _PublisherRepositoriesMock = new Mock<IPublisherRepositories>();
             _PublisherSendiesMock = new Mock<IPublisherSend>();
-            _PublisherMangerMock = new publishermanger(_PublisherRepositoriesMock.Object, _PublisherSendiesMock.Object);
+            _PublisherManger = new publishermanger(_PublisherRepositoriesMock.Object, _PublisherSendiesMock.Object);
             PublisherResourceToTest = new List<PublisherResource>
             {
                 new PublisherResource
@@ -51,7 +53,7 @@ namespace Publisherss.Domin.Test
                 }
             });
             //act
-            var result = await _PublisherMangerMock.GetPublishers();
+            var result = await _PublisherManger.GetPublishers();
             //Assert
             Assert.NotNull(result);
             Assert.IsType<List<PublisherResource>>(result);
@@ -83,7 +85,7 @@ namespace Publisherss.Domin.Test
                 Salery = 4325,
                 DateOfBirth = new DateTime(),
             };
-            var result = await _PublisherMangerMock.GetPublisher(newPublisherResource.Id);
+            var result = await _PublisherManger.GetPublisher(newPublisherResource.Id);
 
             //Assert
             Assert.Equal(PublisherId, newPublisher.Id);
@@ -104,7 +106,7 @@ namespace Publisherss.Domin.Test
             _PublisherRepositoriesMock.Setup(c => c.CreatePublisher(It.IsAny<Contract.Entities.Publisher>())).ReturnsAsync(newPublisher);
 
             //act
-            var result = await _PublisherMangerMock.CreatePublisher(new Contract.models.PublisherModel
+            var result = await _PublisherManger.CreatePublisher(new Contract.models.PublisherModel
             {
                 Name = "test3",
                 Email = "test3@test.test",
@@ -123,10 +125,41 @@ namespace Publisherss.Domin.Test
             _PublisherRepositoriesMock.Setup(c => c.GetPublisher(It.IsAny<int>())).Returns(Task.FromResult<Contract.Entities.Publisher>(null));
             //act
             var exception = await Assert.ThrowsAsync<Exception>(() =>
-                _PublisherMangerMock.DeleteResource(int.MaxValue)
+                _PublisherManger.DeleteResource(int.MaxValue)
              );
             //Assert
         }
+
+        [Fact]
+        public async void Remove_Publisher()
+        {
+            //Arrange
+            Contract.Entities.Publisher newPublisher = new Contract.Entities.Publisher
+            {
+                Id = 1,
+                Name = "test2",
+                Email = "test2@test.test",
+                Salery = 4325,
+                DateOfBirth = new DateTime(),
+                Books = new List<Book>() { }
+            };
+        //Arrange
+            _PublisherRepositoriesMock.Setup(c => c.GetPublisher(It.IsAny<int>())).ReturnsAsync(newPublisher);
+            //act
+            PublisherResource newPublisherResource = new PublisherResource()
+            {
+                Id = 1,
+                Name = "test2",
+                Email = "test2@test.test",
+                Salery = 4325,
+                DateOfBirth = new DateTime(),
+            };
+            await _PublisherManger.DeleteResource(newPublisherResource.Id);
+            _PublisherRepositoriesMock.Verify(x => x.deletePublisher(newPublisher.Id));
+            //Assert
+            //Assert.True(result);
+        }
+
 
         //public async void Update_Publisher()
         //{
