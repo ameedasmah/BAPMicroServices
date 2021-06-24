@@ -40,7 +40,7 @@ namespace WebApplication1.Helper
                 Email = entities.Email,
                 DateOfBirth = entities.DateOfBirth,
                 Salery = entities.Salery,
-                Books = entities.Books.Select(x => x.ToLightResource()).ToList()
+                //Books = entities.Books.Select(x => x.ToLightResource()).ToList()
             };
         }
 

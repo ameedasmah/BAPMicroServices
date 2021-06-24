@@ -222,3 +222,5 @@ E:\New folder\GitHub ApiBook\AuthorPublisherApi\WebApplication1\obj\Debug\net5.0
 E:\New folder\GitHub ApiBook\AuthorPublisherApi\WebApplication1\obj\Debug\net5.0\ref\AuthorPublisherProject.dll
 E:\New folder\GitHub ApiBook\AuthorPublisherApi\WebApplication1\obj\Debug\net5.0\AuthorPublisherProject.pdb
 E:\New folder\GitHub ApiBook\AuthorPublisherApi\WebApplication1\obj\Debug\net5.0\AuthorPublisherProject.genruntimeconfig.cache
+E:\New folder\GitHub ApiBook\AuthorPublisherApi\WebApplication1\bin\Debug\net5.0\Castle.Core.dll
+E:\New folder\GitHub ApiBook\AuthorPublisherApi\WebApplication1\bin\Debug\net5.0\Moq.dll
