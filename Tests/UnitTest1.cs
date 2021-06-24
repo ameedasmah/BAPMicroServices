@@ -7,6 +7,7 @@ using Contract.Resourse;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using Domain.mangers.Producer;
+using System.Management.Automation;
 
 namespace Publisherss.Domin.Test
 {
@@ -103,17 +104,29 @@ namespace Publisherss.Domin.Test
             _PublisherRepositoriesMock.Setup(c => c.CreatePublisher(It.IsAny<Contract.Entities.Publisher>())).ReturnsAsync(newPublisher);
 
             //act
-            var result = await _PublisherMangerMock.CreatePublisher(new Contract.models.PublisherModel { 
-            Name="test3",
-            Email="test3@test.test",
-            DateOfBirth=new DateTime(),
-            Salery=4530,
+            var result = await _PublisherMangerMock.CreatePublisher(new Contract.models.PublisherModel
+            {
+                Name = "test3",
+                Email = "test3@test.test",
+                DateOfBirth = new DateTime(),
+                Salery = 4530,
             });
             //Assert
             Assert.NotNull(result);
             Assert.IsType<PublisherResource>(result);
         }
 
+        [Fact]
+        public async void Remove_PublisherWithNotExisitingId()
+        {
+            //Arrange
+            _PublisherRepositoriesMock.Setup(c => c.GetPublisher(It.IsAny<int>())).Returns(Task.FromResult<Contract.Entities.Publisher>(null));
+            //act
+            var exception = await Assert.ThrowsAsync<Exception>(() =>
+                _PublisherMangerMock.DeleteResource(int.MaxValue)
+             );
+            //Assert
+        }
 
         //public async void Update_Publisher()
         //{
@@ -126,7 +139,6 @@ namespace Publisherss.Domin.Test
         //        Salery = 4325,
         //        DateOfBirth = new DateTime(),
         //    };
-     
         //    _PublisherRepositoriesMock.Setup(c => c.updatePublisher(newPublisher.Id));
         //    //act
         //    var result = await _PublisherMangerMock.CreatePublisher(new Contract.models.PublisherModel

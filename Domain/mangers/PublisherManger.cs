@@ -91,12 +91,10 @@ namespace Domain.mangers
             }
             return publisherResource;
         }
-
         public async Task<PublisherResource> PutPublisher(int id, PublisherModel model)
         {
             var existingEntity = await _repository.GetPublisher(id);
             if (existingEntity == null) throw new Exception("Id not Found");
-
             existingEntity.Name = model.Name;
             existingEntity.Email = model.Email;
             existingEntity.Salery = model.Salery;
