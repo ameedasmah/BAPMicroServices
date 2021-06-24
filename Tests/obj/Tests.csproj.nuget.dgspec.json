@@ -286,6 +286,10 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "dependencies": {
+            "Cake.Powershell": {
+              "target": "Package",
+              "version": "[1.0.1, )"
+            },
             "Microsoft.NET.Test.Sdk": {
               "target": "Package",
               "version": "[16.7.1, )"
