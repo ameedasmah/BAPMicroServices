@@ -100,7 +100,8 @@ namespace Publisherss.Domin.Test
                 DateOfBirth = new DateTime(),
             };
 
-            _PublisherRepositoriesMock.Setup(c => c.CreatePublisher(newPublisher)).ReturnsAsync(newPublisher);
+            _PublisherRepositoriesMock.Setup(c => c.CreatePublisher(It.IsAny<Contract.Entities.Publisher>())).ReturnsAsync(newPublisher);
+
             //act
             var result = await _PublisherMangerMock.CreatePublisher(new Contract.models.PublisherModel { 
             Name="test3",
@@ -125,7 +126,7 @@ namespace Publisherss.Domin.Test
         //        Salery = 4325,
         //        DateOfBirth = new DateTime(),
         //    };
-
+     
         //    _PublisherRepositoriesMock.Setup(c => c.updatePublisher(newPublisher.Id));
         //    //act
         //    var result = await _PublisherMangerMock.CreatePublisher(new Contract.models.PublisherModel
