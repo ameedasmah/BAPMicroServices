@@ -1,3 +1,4 @@
+using AuthorPublisherProject.Middlewares;
 using Contract.Entities;
 using Domain.mangers;
 using Domain.mangers.Producer;
@@ -75,6 +76,7 @@ namespace WebApplication1
             .AllowAnyHeader().AllowAnyMethod());
 
             app.UseAuthorization();
+            app.UseMiddleware<GlobalErrorHandlingMiddleware>();
 
             app.UseEndpoints(endpoints =>
             {
