@@ -56,7 +56,7 @@ namespace Domain.mangers
         public async Task DeleteResource(int Id)
         {
             var BookToDelete = await _repository.GetPublisher(Id);
-            if (BookToDelete == null) throw new ErrorException("Idsss not Found"); 
+            if (BookToDelete == null) throw new KeyNotFoundException("Idsss not Found"); 
             if (BookToDelete.Books.Count == 0)
             {
                 await _repository.deletePublisher(BookToDelete.Id);
@@ -69,7 +69,7 @@ namespace Domain.mangers
             }
             else
             {
-                throw new Exception("Cant Delete A Publisher That has A book");
+                throw new ErrorException("Cant Delete A Publisher That has A book");
             }
         }
         public async Task<PublisherResource> GetPublisher(int id)
@@ -97,7 +97,7 @@ namespace Domain.mangers
         public async Task<PublisherResource> PutPublisher(int id, PublisherModel model)
         {
             var existingEntity = await _repository.GetPublisher(id);
-            if (existingEntity == null) throw new Exception("Id not Found");
+            if (existingEntity == null) throw new KeyNotFoundException("Id not Found");
             existingEntity.Name = model.Name;
             existingEntity.Email = model.Email;
             existingEntity.Salery = model.Salery;
@@ -113,4 +113,3 @@ namespace Domain.mangers
         }
     }
 }
-

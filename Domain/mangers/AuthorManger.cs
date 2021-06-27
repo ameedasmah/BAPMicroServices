@@ -1,4 +1,5 @@
-﻿using Contract.models;
+﻿using Contract.Exceptions;
+using Contract.models;
 using Contract.Resourse;
 using DataAccessLayer.Entities;
 using DataAccessLayer.Repositories;
@@ -55,7 +56,7 @@ namespace Domain.mangers
         {
             var bookToDelete = await _reposotiry.GetAuthor(id);
             if (bookToDelete == null)
-                throw new Exception($"Id is not correct");
+                throw new KeyNotFoundException($"Id is not correct");
             if (bookToDelete.Books.Count == 0)
             {
                 _AuthorSend.SendAuthor(new AuthorToSend()
@@ -69,7 +70,7 @@ namespace Domain.mangers
             }
             else
             {
-                throw new Exception("Cant Delete Author that has a Book");
+                throw new ErrorException("Cant Delete Author that has a Book");
             }
         }
 
@@ -78,7 +79,7 @@ namespace Domain.mangers
             var AuthorEntitiy = await _reposotiry.GetAuthor(id);
             if(AuthorEntitiy is null)
             {
-                throw new Exception($"this {id} is not found");
+                throw new KeyNotFoundException($"this {id} is not found");
             }
 
             return AuthorEntitiy.ToResource(); ;
@@ -101,7 +102,7 @@ namespace Domain.mangers
         {
             var existingEntitiy = await _reposotiry.GetAuthor(Id);
             if (existingEntitiy is null)
-                throw new Exception("there is a wrong Id");
+                throw new KeyNotFoundException("there is a wrong Id");
 
             existingEntitiy.FullName = model.FullName;
             existingEntitiy.Email = model.Email;
@@ -110,6 +111,5 @@ namespace Domain.mangers
             var UpdateEntitiy = await _reposotiry.Update(existingEntitiy);
             return UpdateEntitiy.ToResource();
         }
-
     }
 }
