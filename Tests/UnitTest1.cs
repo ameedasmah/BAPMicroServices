@@ -133,7 +133,7 @@ namespace Publisherss.Domin.Test
             _PublisherRepositoriesMock.Setup(c => c.GetPublisher(It.IsAny<int>())).Returns(Task.FromResult<DataAccessLayer.Entities.Publisher>(null));
             //act
             var exception = await Assert.ThrowsAsync<Exception>(() =>
-                _PublisherManger.DeleteResource(int.MaxValue)
+                _PublisherManger.DeletePublisher(int.MaxValue)
              );
             //Assert
             exception.Message.Equals("Id not Found");
@@ -164,7 +164,7 @@ namespace Publisherss.Domin.Test
                 DateOfBirth = new DateTime(),
                 Books = new List<PublisherBookCreate>() { }
             };
-            await _PublisherManger.DeleteResource(newPublisherResource.Id);
+            await _PublisherManger.DeletePublisher(newPublisherResource.Id);
             
             //Assert
             _PublisherRepositoriesMock.Verify(x => x.deletePublisher(newPublisher.Id));
@@ -187,7 +187,7 @@ namespace Publisherss.Domin.Test
             //Arrange
             //_PublisherRepositoriesMock.Setup(c => c.GetPublisher(It.IsAny<int>())).Returns(Task.FromResult<Contract.Entities.Publisher>(null));
             var exception = await Assert.ThrowsAsync<Exception>(() =>
-               _PublisherManger.DeleteResource(newPublisher.Id));
+               _PublisherManger.DeletePublisher(newPublisher.Id));
             //Assert
             Assert.Equal(exception.Message, "Cant Delete A Publisher That has A book");
         }

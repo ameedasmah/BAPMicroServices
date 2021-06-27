@@ -47,9 +47,9 @@ namespace AuthorPublisherProject.Controllers
             return await publishermanger.PutPublisher(id, model);
         }
         [HttpDelete("{Id}")]
-        public async Task DeleteResource(int Id)
+        public async Task DeletePublisher(int Id)
         {
-            await publishermanger.DeleteResource(Id);
+            await publishermanger.DeletePublisher(Id);
         }
     }
 }

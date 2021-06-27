@@ -15,38 +15,38 @@ namespace AuthorPublisherProject.Middlewares
         public GlobalErrorHandlingMiddleware(RequestDelegate next)
         {
             _next = next;
-                }
-            public async Task Invoke(HttpContext context)
+        }
+        public async Task Invoke(HttpContext context)
+        {
+            try
             {
-                try
+                await _next.Invoke(context);
+            }
+            catch (Exception ex)
+            {
+                var response = context.Response;
+                response.ContentType = "application/json";
+                switch (ex)
                 {
-                    await _next.Invoke(context);
+                    case ErrorException:
+                        response.StatusCode = (int)HttpStatusCode.BadRequest;
+                        break;
+                    case KeyNotFoundException:
+                        response.StatusCode = (int)HttpStatusCode.NotFound;
+                        break;
+                    default:
+                        // unhandled error
+                        response.StatusCode = (int)HttpStatusCode.InternalServerError;
+                        break;
                 }
-                catch (Exception ex)
+                var errorResponse = new
                 {
-                    var response = context.Response;
-                    response.ContentType = "application/json";
-                    switch (ex)
-                    {
-                        case ErrorException :
-                            response.StatusCode = (int)HttpStatusCode.BadRequest;
-                            break;
-                        case KeyNotFoundException:
-                            response.StatusCode = (int)HttpStatusCode.NotFound;
-                            break;
-                        default:
-                            // unhandled error
-                            response.StatusCode = (int)HttpStatusCode.InternalServerError;
-                            break;
-                    }
-                    var errorResponse = new
-                    {
-                        message = ex.Message,
-                        statusCode = response.StatusCode
-                    };
-                    var errorJson = JsonSerializer.Serialize(errorResponse);
-                    await response.WriteAsync(errorJson);
-                    throw;
+                    message = ex.Message,
+                    statusCode = response.StatusCode
+                };
+                var errorJson = JsonSerializer.Serialize(errorResponse);
+                await response.WriteAsync(errorJson);
+                throw;
             }
         }
     }
