@@ -24,7 +24,7 @@ namespace Domain.mangers
         Task<PublisherResource> GetPublisher(int id);
         Task<PublisherResource> CreatePublisher(PublisherModel newPublisherModel);
         Task<PublisherResource> PutPublisher(int id, PublisherModel model);
-        Task DeleteResource(int Id);
+        Task DeletePublisher(int Id);
     }
     public class publishermanger : IPublisherManger
     {
@@ -53,7 +53,7 @@ namespace Domain.mangers
             });
             return newPublisherResource.ToResource();
         }
-        public async Task DeleteResource(int Id)
+        public async Task DeletePublisher(int Id)
         {
             var BookToDelete = await _repository.GetPublisher(Id);
             if (BookToDelete == null) throw new KeyNotFoundException("Idsss not Found"); 
@@ -113,3 +113,4 @@ namespace Domain.mangers
         }
     }
 }
+
