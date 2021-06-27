@@ -1,4 +1,5 @@
 ﻿
+using Contract.Exceptions;
 using Contract.models;
 using Contract.Resourse;
 using DataAccessLayer.Entities;
@@ -7,6 +8,7 @@ using Domain.Helper;
 using Domain.mangers.Producer;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Azure.Management.ResourceManager.Fluent.Core;
+using Realms.Sync.Exceptions;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -54,7 +56,7 @@ namespace Domain.mangers
         public async Task DeleteResource(int Id)
         {
             var BookToDelete = await _repository.GetPublisher(Id);
-            if (BookToDelete == null) throw new AppException();
+            if (BookToDelete == null) throw new ErrorException("Idsss not Found"); 
             if (BookToDelete.Books.Count == 0)
             {
                 await _repository.deletePublisher(BookToDelete.Id);
@@ -75,7 +77,7 @@ namespace Domain.mangers
             var PublisherEntitiy = await _repository.GetPublisher(id);
             if (PublisherEntitiy is null)
             {
-                throw new Exception($"this {id} is not found");
+                throw new KeyNotFoundException($"this {id} is not found");
             }
             return PublisherEntitiy.ToResource();
         }

@@ -51,4 +51,3 @@ E:\New folder\GitHub ApiBook\AuthorPublisherApi\DataAccessLayer\obj\Debug\net5.0
 E:\New folder\GitHub ApiBook\AuthorPublisherApi\DataAccessLayer\obj\Debug\net5.0\DataAccessLayer.dll
 E:\New folder\GitHub ApiBook\AuthorPublisherApi\DataAccessLayer\obj\Debug\net5.0\ref\DataAccessLayer.dll
 E:\New folder\GitHub ApiBook\AuthorPublisherApi\DataAccessLayer\obj\Debug\net5.0\DataAccessLayer.pdb
-E:\New folder\GitHub ApiBook\AuthorPublisherApi\DataAccessLayer\obj\Debug\net5.0\DataAccessLayer.csprojAssemblyReference.cache

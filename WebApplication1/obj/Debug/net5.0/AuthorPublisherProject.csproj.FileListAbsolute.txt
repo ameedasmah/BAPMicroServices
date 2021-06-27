@@ -210,7 +210,6 @@ E:\New folder\GitHub ApiBook\AuthorPublisherApi\WebApplication1\obj\Debug\net5.0
 E:\New folder\GitHub ApiBook\AuthorPublisherApi\WebApplication1\obj\Debug\net5.0\AuthorPublisherProject.AssemblyInfoInputs.cache
 E:\New folder\GitHub ApiBook\AuthorPublisherApi\WebApplication1\obj\Debug\net5.0\AuthorPublisherProject.AssemblyInfo.cs
 E:\New folder\GitHub ApiBook\AuthorPublisherApi\WebApplication1\obj\Debug\net5.0\AuthorPublisherProject.csproj.CoreCompileInputs.cache
-E:\New folder\GitHub ApiBook\AuthorPublisherApi\WebApplication1\obj\Debug\net5.0\AuthorPublisherProject.MvcApplicationPartsAssemblyInfo.cs
 E:\New folder\GitHub ApiBook\AuthorPublisherApi\WebApplication1\obj\Debug\net5.0\AuthorPublisherProject.MvcApplicationPartsAssemblyInfo.cache
 E:\New folder\GitHub ApiBook\AuthorPublisherApi\WebApplication1\obj\Debug\net5.0\EFCoreSqlServerNetTopologySuite.cs
 E:\New folder\GitHub ApiBook\AuthorPublisherApi\WebApplication1\obj\Debug\net5.0\staticwebassets\AuthorPublisherProject.StaticWebAssets.Manifest.cache
@@ -224,3 +223,10 @@ E:\New folder\GitHub ApiBook\AuthorPublisherApi\WebApplication1\obj\Debug\net5.0
 E:\New folder\GitHub ApiBook\AuthorPublisherApi\WebApplication1\obj\Debug\net5.0\AuthorPublisherProject.genruntimeconfig.cache
 E:\New folder\GitHub ApiBook\AuthorPublisherApi\WebApplication1\bin\Debug\net5.0\Castle.Core.dll
 E:\New folder\GitHub ApiBook\AuthorPublisherApi\WebApplication1\bin\Debug\net5.0\Moq.dll
+E:\New folder\GitHub ApiBook\AuthorPublisherApi\WebApplication1\bin\Debug\net5.0\MongoDB.Bson.dll
+E:\New folder\GitHub ApiBook\AuthorPublisherApi\WebApplication1\bin\Debug\net5.0\Realm.dll
+E:\New folder\GitHub ApiBook\AuthorPublisherApi\WebApplication1\bin\Debug\net5.0\Remotion.Linq.dll
+E:\New folder\GitHub ApiBook\AuthorPublisherApi\WebApplication1\bin\Debug\net5.0\runtimes\linux-x64\native\librealm-wrappers.so
+E:\New folder\GitHub ApiBook\AuthorPublisherApi\WebApplication1\bin\Debug\net5.0\runtimes\osx-x64\native\librealm-wrappers.dylib
+E:\New folder\GitHub ApiBook\AuthorPublisherApi\WebApplication1\bin\Debug\net5.0\runtimes\win-x64\native\realm-wrappers.dll
+E:\New folder\GitHub ApiBook\AuthorPublisherApi\WebApplication1\bin\Debug\net5.0\runtimes\win-x86\native\realm-wrappers.dll

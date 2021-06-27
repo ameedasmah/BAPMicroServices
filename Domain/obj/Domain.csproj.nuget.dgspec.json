@@ -222,6 +222,10 @@
             "RabbitMQ.Client": {
               "target": "Package",
               "version": "[6.2.1, )"
+            },
+            "Realm": {
+              "target": "Package",
+              "version": "[10.2.0, )"
             }
           },
           "imports": [

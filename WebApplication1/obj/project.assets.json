@@ -26,7 +26,7 @@
       "Fody/6.5.1": {
         "type": "package",
         "build": {
-          "build/Fody.targets": {}
+          "build/_._": {}
         }
       },
       "Humanizer.Core/2.8.26": {
@@ -1592,7 +1592,7 @@
           "lib/netstandard2.0/Realm.dll": {}
         },
         "build": {
-          "build/Realm.props": {}
+          "build/_._": {}
         },
         "runtimeTargets": {
           "runtimes/linux-x64/native/librealm-wrappers.so": {
@@ -1619,7 +1619,7 @@
           "System.Management": "4.5.0"
         },
         "build": {
-          "build/Realm.Fody.props": {}
+          "build/_._": {}
         }
       },
       "Remotion.Linq/2.2.0": {
@@ -3681,7 +3681,8 @@
           "Microsoft.Azure.Management.ResourceManager.Fluent": "1.37.1",
           "Microsoft.EntityFrameworkCore": "5.0.7",
           "Microsoft.EntityFrameworkCore.SqlServer.NetTopologySuite": "5.0.7",
-          "RabbitMQ.Client": "6.2.1"
+          "RabbitMQ.Client": "6.2.1",
+          "Realm": "10.2.0"
         },
         "compile": {
           "bin/placeholder/Domain.dll": {}
@@ -10824,7 +10825,6 @@
       "Microsoft.Extensions.Caching.SqlServer >= 5.0.1",
       "Moq >= 4.16.1",
       "RabbitMQ.Client >= 6.2.1",
-      "Realm >= 10.2.0",
       "Swashbuckle.AspNetCore >= 6.1.4",
       "xunit.extensibility.execution >= 2.4.1"
     ]
@@ -10916,10 +10916,6 @@
           "RabbitMQ.Client": {
             "target": "Package",
             "version": "[6.2.1, )"
-          },
-          "Realm": {
-            "target": "Package",
-            "version": "[10.2.0, )"
           },
           "Swashbuckle.AspNetCore": {
             "target": "Package",

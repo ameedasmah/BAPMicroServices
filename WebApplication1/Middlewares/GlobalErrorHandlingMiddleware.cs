@@ -1,5 +1,5 @@
-﻿using Microsoft.AspNetCore.Http;
-using Realms.Sync.Exceptions;
+﻿using Contract.Exceptions;
+using Microsoft.AspNetCore.Http;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -29,7 +29,7 @@ namespace AuthorPublisherProject.Middlewares
                     response.ContentType = "application/json";
                     switch (ex)
                     {
-                        case AppException :
+                        case ErrorException :
                             response.StatusCode = (int)HttpStatusCode.BadRequest;
                             break;
                         case KeyNotFoundException:
