@@ -1,5 +1,4 @@
-﻿using Contract.Entities;
-using Contract.models;
+﻿using Contract.models;
 using Contract.Resourse;
 using Domain.mangers;
 using Microsoft.AspNetCore.Http;
@@ -8,11 +7,9 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using WebApplication1.Helper;
-using WebApplication1.Repositories;
 
 
-namespace WebApplication1.Controllers
+namespace AuthorPublisherProject.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]

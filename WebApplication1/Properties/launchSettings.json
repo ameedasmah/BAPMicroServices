@@ -17,7 +17,7 @@
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
     },
-    "WebApplication1": {
+    "AuthorPublisherProject": {
       "commandName": "Project",
       "launchBrowser": true,
       "launchUrl": "swagger",

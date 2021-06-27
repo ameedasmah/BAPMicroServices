@@ -1,16 +1,14 @@
-﻿
-using Contract.Entities;
-using Contract.models;
+﻿using Contract.models;
 using Contract.Resourse;
+using DataAccessLayer.Entities;
+using DataAccessLayer.Repositories;
+using Domain.Helper;
 using Domain.mangers.Producer;
-using Domins.mangers;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using WebApplication1.Helper;
-using WebApplication1.Repositories;
 
 namespace Domain.mangers
 {

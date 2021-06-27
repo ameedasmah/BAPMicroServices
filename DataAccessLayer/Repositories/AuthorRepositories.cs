@@ -2,10 +2,10 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using Contract.Entities;
+using DataAccessLayer.Entities;
 using Microsoft.EntityFrameworkCore;
 
-namespace Domins.mangers
+namespace DataAccessLayer.Repositories
 {
 
     public interface IAuthorRepositories
@@ -46,7 +46,6 @@ namespace Domins.mangers
             }
 
         }
-
         public async Task Delete(int Id)
         {
             var BookToDelelte = await _bookContext.Authors.FirstOrDefaultAsync(x => x.Id == Id);

@@ -1,7 +1,9 @@
 ﻿
-using Contract.Entities;
 using Contract.models;
 using Contract.Resourse;
+using DataAccessLayer.Entities;
+using DataAccessLayer.Repositories;
+using Domain.Helper;
 using Domain.mangers.Producer;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Azure.Management.ResourceManager.Fluent.Core;
@@ -10,8 +12,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using WebApplication1.Helper;
-using WebApplication1.Repositories;
+
 
 namespace Domain.mangers
 {
@@ -53,7 +54,7 @@ namespace Domain.mangers
         public async Task DeleteResource(int Id)
         {
             var BookToDelete = await _repository.GetPublisher(Id);
-            if (BookToDelete == null) throw new Exception("Id not Found");
+            if (BookToDelete == null) throw new AppException();
             if (BookToDelete.Books.Count == 0)
             {
                 await _repository.deletePublisher(BookToDelete.Id);

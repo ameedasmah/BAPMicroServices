@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Contract.Entities
+namespace DataAccessLayer.Entities
 {
     public class BookContext : DbContext
     {

@@ -2,14 +2,14 @@ using System;
 using Xunit;
 using Moq;
 using Domain.mangers;
-using WebApplication1.Repositories;
 using Contract.Resourse;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using Domain.mangers.Producer;
 using System.Management.Automation;
 using Contract.models;
-using Contract.Entities;
+using DataAccessLayer.Repositories;
+using DataAccessLayer.Entities;
 
 namespace Publisherss.Domin.Test
 {
@@ -36,7 +36,7 @@ namespace Publisherss.Domin.Test
                     DateOfBirth = new DateTime(),
             }
           };
-            Contract.Entities.Publisher NewPublisher = new Contract.Entities.Publisher
+            DataAccessLayer.Entities.Publisher NewPublisher = new DataAccessLayer.Entities.Publisher
             {
                 Id = 1,
                     Name = "test2",
@@ -49,9 +49,9 @@ namespace Publisherss.Domin.Test
         public async void GetAll_PublisherList()
         {
             //Arrange
-            _PublisherRepositoriesMock.Setup(c => c.GetPublishers()).ReturnsAsync(new List<Contract.Entities.Publisher>
+            _PublisherRepositoriesMock.Setup(c => c.GetPublishers()).ReturnsAsync(new List<DataAccessLayer.Entities.Publisher>
             {
-                new Contract.Entities.Publisher
+                new DataAccessLayer.Entities.Publisher
                 {
                     Id = 1,
                     Name = "test2",
@@ -74,7 +74,7 @@ namespace Publisherss.Domin.Test
 
             var PublisherId = 1;
 
-            Contract.Entities.Publisher newPublisher = new Contract.Entities.Publisher
+            DataAccessLayer.Entities.Publisher newPublisher = new DataAccessLayer.Entities.Publisher
             {
                 Id = 1,
                 Name = "test2",
@@ -102,7 +102,7 @@ namespace Publisherss.Domin.Test
         public async void Create_Publisher()
         {
             //Arrange
-            Contract.Entities.Publisher newPublisher = new Contract.Entities.Publisher
+            DataAccessLayer.Entities.Publisher newPublisher = new DataAccessLayer.Entities.Publisher
             {
                 Id = 1,
                 Name = "test2",
@@ -111,7 +111,7 @@ namespace Publisherss.Domin.Test
                 DateOfBirth = new DateTime(),
             };
 
-            _PublisherRepositoriesMock.Setup(c => c.CreatePublisher(It.IsAny<Contract.Entities.Publisher>())).ReturnsAsync(newPublisher);
+            _PublisherRepositoriesMock.Setup(c => c.CreatePublisher(It.IsAny<DataAccessLayer.Entities.Publisher>())).ReturnsAsync(newPublisher);
 
             //act
             var result = await _PublisherManger.CreatePublisher(new Contract.models.PublisherModel
@@ -130,7 +130,7 @@ namespace Publisherss.Domin.Test
         public async void Remove_PublisherWithNotExisitingId()
         {
             //Arrange
-            _PublisherRepositoriesMock.Setup(c => c.GetPublisher(It.IsAny<int>())).Returns(Task.FromResult<Contract.Entities.Publisher>(null));
+            _PublisherRepositoriesMock.Setup(c => c.GetPublisher(It.IsAny<int>())).Returns(Task.FromResult<DataAccessLayer.Entities.Publisher>(null));
             //act
             var exception = await Assert.ThrowsAsync<Exception>(() =>
                 _PublisherManger.DeleteResource(int.MaxValue)
@@ -143,7 +143,7 @@ namespace Publisherss.Domin.Test
         public async void Remove_Publisher()
         {
             //Arrange
-            Contract.Entities.Publisher newPublisher = new Contract.Entities.Publisher
+            DataAccessLayer.Entities.Publisher newPublisher = new DataAccessLayer.Entities.Publisher
             {
                 Id = 1,
                 Name = "test2",
@@ -173,7 +173,7 @@ namespace Publisherss.Domin.Test
         public async void Remove_PublisherThatHasBooks()
         {
             //Arrange
-            Contract.Entities.Publisher newPublisher = new Contract.Entities.Publisher
+            DataAccessLayer.Entities.Publisher newPublisher = new DataAccessLayer.Entities.Publisher
             {
                 Id = 1,
                 Name = "test2",

@@ -43,7 +43,6 @@ E:\New folder\GitHub ApiBook\AuthorPublisherApi\DataAccessLayer\bin\Debug\net5.0
 E:\New folder\GitHub ApiBook\AuthorPublisherApi\DataAccessLayer\bin\Debug\net5.0\DataAccessLayer.dll
 E:\New folder\GitHub ApiBook\AuthorPublisherApi\DataAccessLayer\bin\Debug\net5.0\ref\DataAccessLayer.dll
 E:\New folder\GitHub ApiBook\AuthorPublisherApi\DataAccessLayer\bin\Debug\net5.0\DataAccessLayer.pdb
-E:\New folder\GitHub ApiBook\AuthorPublisherApi\DataAccessLayer\obj\Debug\net5.0\DataAccessLayer.csprojAssemblyReference.cache
 E:\New folder\GitHub ApiBook\AuthorPublisherApi\DataAccessLayer\obj\Debug\net5.0\DataAccessLayer.GeneratedMSBuildEditorConfig.editorconfig
 E:\New folder\GitHub ApiBook\AuthorPublisherApi\DataAccessLayer\obj\Debug\net5.0\DataAccessLayer.AssemblyInfoInputs.cache
 E:\New folder\GitHub ApiBook\AuthorPublisherApi\DataAccessLayer\obj\Debug\net5.0\DataAccessLayer.AssemblyInfo.cs
@@ -52,3 +51,4 @@ E:\New folder\GitHub ApiBook\AuthorPublisherApi\DataAccessLayer\obj\Debug\net5.0
 E:\New folder\GitHub ApiBook\AuthorPublisherApi\DataAccessLayer\obj\Debug\net5.0\DataAccessLayer.dll
 E:\New folder\GitHub ApiBook\AuthorPublisherApi\DataAccessLayer\obj\Debug\net5.0\ref\DataAccessLayer.dll
 E:\New folder\GitHub ApiBook\AuthorPublisherApi\DataAccessLayer\obj\Debug\net5.0\DataAccessLayer.pdb
+E:\New folder\GitHub ApiBook\AuthorPublisherApi\DataAccessLayer\obj\Debug\net5.0\DataAccessLayer.csprojAssemblyReference.cache
