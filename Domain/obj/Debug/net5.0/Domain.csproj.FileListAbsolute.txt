@@ -64,3 +64,4 @@ E:\New folder\GitHub ApiBook\AuthorPublisherApi\Domain\obj\Debug\net5.0\Domain.c
 E:\New folder\GitHub ApiBook\AuthorPublisherApi\Domain\obj\Debug\net5.0\Domain.dll
 E:\New folder\GitHub ApiBook\AuthorPublisherApi\Domain\obj\Debug\net5.0\ref\Domain.dll
 E:\New folder\GitHub ApiBook\AuthorPublisherApi\Domain\obj\Debug\net5.0\Domain.pdb
+E:\New folder\GitHub ApiBook\AuthorPublisherApi\Domain\obj\Debug\net5.0\Domain.csproj.Fody.CopyLocal.cache
