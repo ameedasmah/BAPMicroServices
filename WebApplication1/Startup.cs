@@ -1,8 +1,8 @@
 using AuthorPublisherProject.Middlewares;
-using Contract.Entities;
+using DataAccessLayer.Entities;
+using DataAccessLayer.Repositories;
 using Domain.mangers;
 using Domain.mangers.Producer;
-using Domins.mangers;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -17,9 +17,8 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using WebApplication1.Repositories;
 
-namespace WebApplication1
+namespace AuthorPublisherProject
 {
     public class Startup
     {
@@ -45,7 +44,7 @@ namespace WebApplication1
               builder => builder.AllowAnyOrigin()));
             services.AddSwaggerGen(c =>
             {
-                c.SwaggerDoc("v1", new OpenApiInfo { Title = "WebApplication1", Version = "v1" });
+                c.SwaggerDoc("v1", new OpenApiInfo { Title = "AuthorPublisherProject", Version = "v1" });
             });
             services.AddControllersWithViews()
                 .AddNewtonsoftJson(options =>
@@ -60,7 +59,7 @@ namespace WebApplication1
             {
                 app.UseDeveloperExceptionPage();
                 app.UseSwagger();
-                app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "WebApplication1 v1"));
+                app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "AuthorPublisherProject v1"));
             }
             else
             {

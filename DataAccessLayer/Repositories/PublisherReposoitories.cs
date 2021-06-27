@@ -1,11 +1,11 @@
-﻿using Contract.Entities;
+﻿using DataAccessLayer.Entities;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
 
-namespace WebApplication1.Repositories
+namespace DataAccessLayer.Repositories
 {
     public interface IPublisherRepositories
     {

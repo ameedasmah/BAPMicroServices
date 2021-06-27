@@ -1,10 +1,12 @@
-﻿using Contract.Entities;
+﻿
 using Contract.Resourse;
+using DataAccessLayer.Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-namespace WebApplication1.Helper
+
+namespace Domain.Helper
 {
     public static class Extinsion
     {
