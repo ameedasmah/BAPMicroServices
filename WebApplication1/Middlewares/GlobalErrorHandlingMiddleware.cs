@@ -15,7 +15,6 @@ namespace AuthorPublisherProject.Middlewares
         public GlobalErrorHandlingMiddleware(RequestDelegate next)
         {
             _next = next;
-
                 }
             public async Task Invoke(HttpContext context)
             {
