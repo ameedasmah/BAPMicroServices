@@ -25,16 +25,17 @@ namespace Domain.mangers
     {
         private readonly IAuthorRepositories _reposotiry;
         private readonly IAuthor _AuthorSend;
-
         public AuthorManger(IAuthorRepositories reposotiry, IAuthor AuthorSend)
         {
             _reposotiry = reposotiry;
             _AuthorSend = AuthorSend;
-
         }
-
         public async Task<AuthorResource> CreateAuthor(AuthorModel newAuthor)
         {
+            if (newAuthor == null)
+            {
+                throw new ArgumentNullException($"{nameof(CreateAuthor)} entity musn't to be null ");
+            }
             var AuthEntitiy = new Author()
             {
                 FullName = newAuthor.FullName,
@@ -74,7 +75,7 @@ namespace Domain.mangers
         public async Task<AuthorResource> GetAuthor(int id)
         {
             var AuthorEntitiy = await _reposotiry.GetAuthor(id);
-            if(AuthorEntitiy is null)
+            if (AuthorEntitiy is null)
             {
                 throw new KeyNotFoundException($"this {id} is not found");
             }
@@ -94,10 +95,13 @@ namespace Domain.mangers
         }
         public async Task<AuthorResource> PutAuthor(int Id, AuthorModel model)
         {
+            if (model == null)
+            {
+                throw new ArgumentNullException($"{nameof(CreateAuthor)} entity musn't to be null ");
+            }
             var existingEntitiy = await _reposotiry.GetAuthor(Id);
             if (existingEntitiy is null)
                 throw new KeyNotFoundException("there is a wrong Id");
-
             existingEntitiy.FullName = model.FullName;
             existingEntitiy.Email = model.Email;
             existingEntitiy.Age = model.Age;

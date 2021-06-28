@@ -37,6 +37,10 @@ namespace Domain.mangers
         }
         public async Task<PublisherResource> CreatePublisher(PublisherModel newPublisherModel)
         {
+            if (newPublisherModel == null)
+            {
+                throw new ArgumentNullException($"{nameof(CreatePublisher)} entity musn't to be null ");
+            }
             var newPublisherEntity = new Publisher()
             {
                 Name = newPublisherModel.Name,
@@ -56,7 +60,7 @@ namespace Domain.mangers
         public async Task DeletePublisher(int Id)
         {
             var BookToDelete = await _repository.GetPublisher(Id);
-            if (BookToDelete == null) throw new KeyNotFoundException("Id not Found"); 
+            if (BookToDelete == null) throw new KeyNotFoundException("Id not Found");
             if (BookToDelete.Books.Count == 0)
             {
                 await _repository.deletePublisher(BookToDelete.Id);
@@ -96,6 +100,10 @@ namespace Domain.mangers
         }
         public async Task<PublisherResource> PutPublisher(int id, PublisherModel model)
         {
+            if (model == null)
+            {
+                throw new ArgumentNullException($"{nameof(CreatePublisher)} entity musn't to be null ");
+            }
             var existingEntity = await _repository.GetPublisher(id);
             if (existingEntity == null) throw new KeyNotFoundException("Id not Found");
             existingEntity.Name = model.Name;

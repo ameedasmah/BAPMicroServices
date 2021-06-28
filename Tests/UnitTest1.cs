@@ -65,15 +65,12 @@ namespace Publisherss.Domin.Test
             //Assert
             Assert.NotNull(result);
             Assert.IsType<List<PublisherResource>>(result);
-
         }
         [Fact]
         public async void GetById_Publisher()
         {
             //Arrange
-
             var PublisherId = 1;
-
             DataAccessLayer.Entities.Publisher newPublisher = new DataAccessLayer.Entities.Publisher
             {
                 Id = 1,
@@ -82,7 +79,6 @@ namespace Publisherss.Domin.Test
                 Salery = 4325,
                 DateOfBirth = new DateTime(),
             };
-
             _PublisherRepositoriesMock.Setup(c => c.GetPublisher(newPublisher.Id)).ReturnsAsync(newPublisher);
             //act
             PublisherResource newPublisherResource = new PublisherResource()
@@ -110,9 +106,7 @@ namespace Publisherss.Domin.Test
                 Salery = 4325,
                 DateOfBirth = new DateTime(),
             };
-
             _PublisherRepositoriesMock.Setup(c => c.CreatePublisher(It.IsAny<DataAccessLayer.Entities.Publisher>())).ReturnsAsync(newPublisher);
-
             //act
             var result = await _PublisherManger.CreatePublisher(new Contract.models.PublisherModel
             {
@@ -181,7 +175,6 @@ namespace Publisherss.Domin.Test
                 Books = new List<Book>() { new Book { }, new Book { } }
             };
             _PublisherRepositoriesMock.Setup(c => c.GetPublisher(newPublisher.Id)).ReturnsAsync(newPublisher);
-
             //Arrange
             //_PublisherRepositoriesMock.Setup(c => c.GetPublisher(It.IsAny<int>())).Returns(Task.FromResult<Contract.Entities.Publisher>(null));
             var exception = await Assert.ThrowsAsync<Exception>(() =>

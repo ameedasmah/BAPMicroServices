@@ -28,20 +28,9 @@ namespace DataAccessLayer.Repositories
 
         public async Task<Author> CreateAuthor(Author author)
         {
-            if (author == null)
-            {
-                throw new ArgumentNullException($"{nameof(CreateAuthor)} entity musn't to be null ");
-            }
-            try
-            {
-                _bookContext.Add(author);
-                await _bookContext.SaveChangesAsync();
-                return await _bookContext.Authors.Include(item => item.Books).FirstOrDefaultAsync(x => x.Id == author.Id);
-            }
-            catch (Exception exiption)
-            {
-                throw new Exception($"Author will Not Create : {exiption.Message}");
-            }
+            _bookContext.Add(author);
+            await _bookContext.SaveChangesAsync();
+            return await _bookContext.Authors.Include(item => item.Books).FirstOrDefaultAsync(x => x.Id == author.Id);
         }
         public async Task Delete(int Id)
         {
@@ -49,18 +38,10 @@ namespace DataAccessLayer.Repositories
             _bookContext.Remove(BookToDelelte);
             await _bookContext.SaveChangesAsync();
         }
-
         public async Task<Author> GetAuthor(int Id)
         {
-            try
-            {
 
-                return await _bookContext.Authors.Include(x => x.Books).FirstOrDefaultAsync(X => X.Id == Id);
-            }
-            catch (Exception exception)
-            {
-                throw new Exception($"handel Your Id method broo :D:D:D:D:D:D : {exception.Message}");
-            }
+            return await _bookContext.Authors.Include(x => x.Books).FirstOrDefaultAsync(X => X.Id == Id);
         }
         public async Task<ICollection<Author>> GetAuthors(Func<Author, bool> predicate)
         {
@@ -70,24 +51,11 @@ namespace DataAccessLayer.Repositories
             }
             return await _bookContext.Authors.Include(x => x.Books).ToListAsync();
         }
-
         public async Task<Author> Update(Author author)
         {
-
-            if (author == null)
-            {
-                throw new ArgumentNullException($"{nameof(Update)} entity mustNn't to be null");
-            }
-            try
-            {
-                _bookContext.Authors.Update(author);
-                await _bookContext.SaveChangesAsync();
-                return author;
-            }
-            catch (Exception exiption)
-            {
-                throw new Exception($"Author will Not Create : {exiption.Message}");
-            };
+            _bookContext.Authors.Update(author);
+            await _bookContext.SaveChangesAsync();
+            return author;
         }
     }
 }
