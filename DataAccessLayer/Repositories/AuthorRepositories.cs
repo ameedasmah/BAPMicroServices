@@ -15,8 +15,6 @@ namespace DataAccessLayer.Repositories
         Task<Author> CreateAuthor(Author author);
         Task<Author> Update(Author author);
         Task Delete(int Id);
-
-
     }
 
     public class AuthorRepositories : IAuthorRepositories
@@ -44,7 +42,6 @@ namespace DataAccessLayer.Repositories
             {
                 throw new Exception($"Author will Not Create : {exiption.Message}");
             }
-
         }
         public async Task Delete(int Id)
         {
@@ -65,7 +62,6 @@ namespace DataAccessLayer.Repositories
                 throw new Exception($"handel Your Id method broo :D:D:D:D:D:D : {exception.Message}");
             }
         }
-
         public async Task<ICollection<Author>> GetAuthors(Func<Author, bool> predicate)
         {
             if (predicate != null)
@@ -87,7 +83,6 @@ namespace DataAccessLayer.Repositories
                 _bookContext.Authors.Update(author);
                 await _bookContext.SaveChangesAsync();
                 return author;
-
             }
             catch (Exception exiption)
             {

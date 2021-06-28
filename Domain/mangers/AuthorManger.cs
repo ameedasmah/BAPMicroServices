@@ -49,9 +49,7 @@ namespace Domain.mangers
                 Type = "Create",
             });
             return AuthortOEntities.ToResource();
-
         }
-
         public async Task Delete(int id)
         {
             var bookToDelete = await _reposotiry.GetAuthor(id);
@@ -73,7 +71,6 @@ namespace Domain.mangers
                 throw new ErrorException("Cant Delete Author that has a Book");
             }
         }
-
         public async Task<AuthorResource> GetAuthor(int id)
         {
             var AuthorEntitiy = await _reposotiry.GetAuthor(id);
@@ -81,10 +78,8 @@ namespace Domain.mangers
             {
                 throw new KeyNotFoundException($"this {id} is not found");
             }
-
             return AuthorEntitiy.ToResource(); ;
         }
-
         public async Task<IEnumerable<AuthorResource>> GetAuthors()
         {
             var AuthorEntities = await _reposotiry.GetAuthors();
@@ -97,7 +92,6 @@ namespace Domain.mangers
             }
             return ResponseAuthor;
         }
-
         public async Task<AuthorResource> PutAuthor(int Id, AuthorModel model)
         {
             var existingEntitiy = await _reposotiry.GetAuthor(Id);
@@ -107,7 +101,6 @@ namespace Domain.mangers
             existingEntitiy.FullName = model.FullName;
             existingEntitiy.Email = model.Email;
             existingEntitiy.Age = model.Age;
-
             var UpdateEntitiy = await _reposotiry.Update(existingEntitiy);
             return UpdateEntitiy.ToResource();
         }

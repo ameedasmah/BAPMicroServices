@@ -56,7 +56,7 @@ namespace Domain.mangers
         public async Task DeletePublisher(int Id)
         {
             var BookToDelete = await _repository.GetPublisher(Id);
-            if (BookToDelete == null) throw new KeyNotFoundException("Idsss not Found"); 
+            if (BookToDelete == null) throw new KeyNotFoundException("Id not Found"); 
             if (BookToDelete.Books.Count == 0)
             {
                 await _repository.deletePublisher(BookToDelete.Id);
