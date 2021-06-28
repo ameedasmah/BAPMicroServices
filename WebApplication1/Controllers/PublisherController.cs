@@ -3,12 +3,8 @@ using Contract.Resourse;
 using Domain.mangers;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
-
-
 
 namespace AuthorPublisherProject.Controllers
 {
@@ -21,7 +17,6 @@ namespace AuthorPublisherProject.Controllers
         {
             this.publishermanger = publishermanger;
         }
-
         [HttpGet]
         public async Task<IEnumerable<PublisherResource>> GetPublishers()
         {
@@ -33,7 +28,6 @@ namespace AuthorPublisherProject.Controllers
         {
             return await publishermanger.GetPublisher(id);
         }
-
         [HttpPost]
         public async Task<ActionResult<PublisherResource>> CreatePublisherAsync([FromBody] PublisherModel newPublisherModel)
         {
@@ -41,7 +35,6 @@ namespace AuthorPublisherProject.Controllers
             return await publishermanger.CreatePublisher(newPublisherModel);
         }
         [HttpPut("{id}")]
-
         public async Task<ActionResult<PublisherResource>> PutPublisher(int id, [FromBody] PublisherModel model)
         {
             return await publishermanger.PutPublisher(id, model);
