@@ -13,6 +13,6 @@ namespace Contract.Resourse
         [DisplayFormat(DataFormatString = "{yyyy-MM-dd}")]
         [DataType(DataType.Date, ErrorMessage = "y")]
         public DateTime DateOfBirth { get; set; }
-        public List<PublisherBookCreate> Books { get; set; }
+        public List<PublisherBookCreateResource> Books { get; set; }
     }
 }

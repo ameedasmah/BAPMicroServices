@@ -29,21 +29,13 @@ namespace DataAccessLayer.Repositories
         }
         public async Task<Publisher> CreatePublisher(Publisher publisher)
         {
-            if(publisher is null)
+            if (publisher is null)
             {
                 throw new ArgumentNullException($"{nameof(CreatePublisher)} should not be null");
             }
-            try
-            {
-
             _Context.Add(publisher);
             await _Context.SaveChangesAsync();
-                return await _Context.publishers.Include(item => item.Books).FirstOrDefaultAsync(x => x.Id == publisher.Id);
-            }
-            catch (Exception exiption)
-            {
-                throw new Exception($"there is an error in Create Publiser, Check It please : {exiption.Message}");
-            }
+            return await _Context.publishers.Include(item => item.Books).FirstOrDefaultAsync(x => x.Id == publisher.Id);
         }
 
         public async Task deletePublisher(int Id)
@@ -55,45 +47,23 @@ namespace DataAccessLayer.Repositories
 
         public async Task<Publisher> GetPublisher(int Id)
         {
-            try
-            {
-            return await _Context.publishers.Include(item=>item.Books).FirstOrDefaultAsync(x=>x.Id==Id);
-            }
-            catch(Exception exception)
-            {
-                throw new Exception($"handel Your Id method broo :D:D:D:D:D:D : {exception.Message}");
-            }
+            return await _Context.publishers.Include(item => item.Books).FirstOrDefaultAsync(x => x.Id == Id);
         }
 
         public async Task<IEnumerable<Publisher>> GetPublishers()
         {
-            try
-            {
-
-            return await _Context.publishers.Include(item=>item.Books).ToListAsync();
-            }
-            catch(Exception exception)
-            {
-                throw new Exception($"handel your get method :D:D:D:C : {exception.Message}");
-            }
+            return await _Context.publishers.Include(item => item.Books).ToListAsync();
         }
 
         public async Task<Publisher> updatePublisher(Publisher publisher)
         {
-            if(publisher is null) {
-                throw new ArgumentNullException($"{nameof(updatePublisher)}publisher must not be null"); 
-            }
-            try
+            if (publisher is null)
             {
-                _Context.publishers.Update(publisher);
-                await _Context.SaveChangesAsync();
-                return publisher;
+                throw new ArgumentNullException($"{nameof(updatePublisher)}publisher must not be null");
             }
-            catch(Exception ex)
-            {
-                throw new Exception($"hii cheack your Error in updatePublisher Mehtod: {ex.Message} ");
-            }
+            _Context.publishers.Update(publisher);
+            await _Context.SaveChangesAsync();
+            return publisher;
         }
-
     }
 }

@@ -39,11 +39,11 @@ namespace Publisherss.Domin.Test
             DataAccessLayer.Entities.Publisher NewPublisher = new DataAccessLayer.Entities.Publisher
             {
                 Id = 1,
-                    Name = "test2",
-                    Email = "test2@test.test",
-                    Salery = 4325,
-                    DateOfBirth = new DateTime(),
-                };
+                Name = "test2",
+                Email = "test2@test.test",
+                Salery = 4325,
+                DateOfBirth = new DateTime(),
+            };
         }
         [Fact]
         public async void GetAll_PublisherList()
@@ -125,7 +125,6 @@ namespace Publisherss.Domin.Test
             Assert.NotNull(result);
             Assert.IsType<PublisherResource>(result);
         }
-
         [Fact]
         public async void Remove_PublisherWithNotExisitingId()
         {
@@ -152,7 +151,7 @@ namespace Publisherss.Domin.Test
                 DateOfBirth = new DateTime(),
                 Books = new List<Book>() { }
             };
-        //Arrange
+            //Arrange
             _PublisherRepositoriesMock.Setup(c => c.GetPublisher(It.IsAny<int>())).ReturnsAsync(newPublisher);
             //act
             PublisherResource newPublisherResource = new PublisherResource()
@@ -162,10 +161,9 @@ namespace Publisherss.Domin.Test
                 Email = "test2@test.test",
                 Salery = 4325,
                 DateOfBirth = new DateTime(),
-                Books = new List<PublisherBookCreate>() { }
+                Books = new List<PublisherBookCreateResource>() { }
             };
             await _PublisherManger.DeletePublisher(newPublisherResource.Id);
-            
             //Assert
             _PublisherRepositoriesMock.Verify(x => x.deletePublisher(newPublisher.Id));
         }
@@ -183,7 +181,7 @@ namespace Publisherss.Domin.Test
                 Books = new List<Book>() { new Book { }, new Book { } }
             };
             _PublisherRepositoriesMock.Setup(c => c.GetPublisher(newPublisher.Id)).ReturnsAsync(newPublisher);
-            
+
             //Arrange
             //_PublisherRepositoriesMock.Setup(c => c.GetPublisher(It.IsAny<int>())).Returns(Task.FromResult<Contract.Entities.Publisher>(null));
             var exception = await Assert.ThrowsAsync<Exception>(() =>

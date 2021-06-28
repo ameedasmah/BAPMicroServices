@@ -22,9 +22,9 @@ namespace Domain.Helper
             };
         }
 
-        public static PublisherBookCreate ToLightResource(this Book entitiy)
+        public static PublisherBookCreateResource ToLightResource(this Book entitiy)
         {
-            return new PublisherBookCreate()
+            return new PublisherBookCreateResource()
             {
                 Id = entitiy.Id,
                 Title = entitiy.Title,
